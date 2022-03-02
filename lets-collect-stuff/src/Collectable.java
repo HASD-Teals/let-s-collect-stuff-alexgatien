@@ -2,17 +2,17 @@ public class Collectable {
     // Add collectable properties here
     private String albumName;
     private String artistName;
-    private int levelofDamage;
+    private int numberOfSongs;
     private double value;
 
     // Add collectable constructors here
     public Collectable() {
     }
 
-    public Collectable(String albumName, String artistName, int levelofDamage, double value) {
+    public Collectable(String albumName, String artistName, int numberOfSongs, double value) {
         this.albumName = albumName;
         this.artistName = artistName;
-        this.levelofDamage = levelofDamage;
+        this.numberOfSongs = numberOfSongs;
         this.value = value;
     }
 
@@ -25,8 +25,8 @@ public class Collectable {
         return this.artistName;
     }
 
-    public int getLevelOfDamage() {
-        return this.levelofDamage;
+    public int getNumberOfSongs() {
+        return this.numberOfSongs;
     }
 
     public double getValue() {
@@ -41,8 +41,8 @@ public class Collectable {
         this.artistName = artistName;
     }
 
-    public void setLevelOfDamage(int levelOfDamage) {
-        this.levelofDamage = levelOfDamage;
+    public void setNumberOfSongs(int numberOfSongs) {
+        this.numberOfSongs = numberOfSongs;
     }
 
     public void setValue(double value) {
@@ -51,15 +51,15 @@ public class Collectable {
     // Add any methods here
 
     public String toString() {
-        return "The album name is " + this.albumName + ". The artist is named" + this.artistName
-                + ". The level of damage out of 10 is" +
-                this.levelofDamage + ". The value of the album is " + this.value +
-                "dollars.";
+        return "The album name is " + this.albumName + ". The artist is named " + this.artistName
+                + ". The number of songs is " +
+                this.numberOfSongs + ". The value of the album is " + this.value +
+                " dollars." + "\n";
     }
 
     public static boolean checkEqual(Collectable first, Collectable second) {
         if (first.getAlbumName() == second.getAlbumName() && first.getArtistName() == second.getArtistName()
-                && first.getValue() == second.getValue() && first.getLevelOfDamage() == first.getLevelOfDamage()) {
+                && first.getValue() == second.getValue() && first.getNumberOfSongs() == second.getNumberOfSongs()) {
             return true;
         } else {
             return false;
